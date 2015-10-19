@@ -1,0 +1,32 @@
+Funktionalitäten:
+
+Charaktererstellung:
+
+Die Startbedingungen (Individuelle Char Attribute, Kuh "Klasse") speichern.
+Anhand dieser wird durch eine Datenbankabfrage das darzustellende Level("Scene") ermittelt.
+
+
+Scene im Canvas darstellen
+Auslesen der benötigten Werte aus der DB. 
+
+- Hintergrundgrafik darstellen
+	- Anhand der DB Grafik bestimmen und mit dieser das Canvas füllen
+
+- Interaktive Objekte darstellen, diese mit Klick-Events versehen. Welche das sind, und alle weiteren notwendigen Infos wie z.B.: Grafik, Zustand des Objekts, Klick Event etc. werden aus der DB ausgelesen.	
+
+- Kuh an der Startposition darstellen.
+
+- Bei Klick auf eine leere Position in der Scene wird die Kuh bewegt "läuft zur Position"
+
+- Bei Klick auf ein interaktives Objekt wird das Event ausgeführt, welches, je nach Zustand ("State") des Objektes ein anderes sein kann. Mögliche Eventfunktionen sind u.a. : GeheZuPosition XY, PlayObjectAnimation A, ChangeStateTo S, SwitchToScene Z (Hier kann die Kuh zu einer anderen Scene wechseln.
+
+- Sounds abspielen
+- Registrierte User: 
+	Registrierung
+		- Prüfen der eingegebenen Daten, wie Name, E-Mail, Passwort etc...
+		- Erstellen eines neuen Benutzerkontos
+	Login
+		- Prüfen der Login Daten auf Korrektheit
+		- Einloggen des Users
+	Speichern des Spielstandes
+	Laden des Spielstandes
