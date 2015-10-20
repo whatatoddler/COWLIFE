@@ -1,6 +1,0 @@
-HTML-Anteil
-
-Zwei Ansichten:
-Erste Ansicht: "Startbildschirm", Titel (head), Untertitel (head), kurze Beschreibung des Spiels (body), Startbutton (button, img, etc.)
-
-Zweite Ansicht: Eigentliches Spiel in canvas-Element. Eventuell Titel (head)
