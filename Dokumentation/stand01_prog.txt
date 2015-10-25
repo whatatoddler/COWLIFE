@@ -1,5 +1,6 @@
 Funktionalitäten:
 
+
 Charaktererstellung (wird erst später implementiert)
 
 Die Startbedingungen (Individuelle Char Attribute,) speichern.
@@ -11,13 +12,15 @@ Auslesen der benötigten Werte aus der DB.
 - Hintergrundgrafik darstellen
 	- Anhand der DB Grafik bestimmen und mit dieser das Canvas füllen
 
-- Interaktive Objekte darstellen, diese mit Klick-Events versehen. Welche das sind, und alle weiteren notwendigen Infos wie z.B.: Grafik, Klick Event etc. werden aus der DB ausgelesen.	
+- Interaktive Objekte darstellen, diese mit Klick-Events versehen. Welche das sind, und alle weiteren notwendigen Infos wie z.B.: Grafik, Klick Event etc. werden aus der DB ausgelesen. Später soll hier eine Art Scriptsprache/liste benutzt werden, um Eventchains zu ermöglichen.
 
 - Kuh an der Startposition darstellen
 
 - Bei Klick auf eine leere Position in der Scene wird die Kuh bewegt, "läuft zur Position" (Laufanimation).
 
-- Bei Klick auf ein interaktives Objekt wird das Event ausgeführt. , z.B. Animation, Sound, spawnen neuer Objekte, Wechsel zu Szene XY. etc.
+- Bei Klick auf ein interaktives Objekt wird das Event ausgeführt. , z.B. Animation, Sound, spawnen neuer Objekte, selbst löschen, Wechsel zu Szene XY. etc.
+
+- Bei Szenenwechsel Möglichkeit einer Cutszene offenhalten.
 
 - Sounds abspielen
 
@@ -30,3 +33,7 @@ Auslesen der benötigten Werte aus der DB.
 		- Einloggen des Users
 	Speichern des Spielstandes
 	Laden des Spielstandes
+
+
+
+- Installationsscript: Erstellt alle notwendigen MySQL Tabellen auf Knopfdruck.
