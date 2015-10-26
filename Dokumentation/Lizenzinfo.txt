@@ -1,0 +1,11 @@
+﻿cow.png 
+  Quelle: pixabay
+  Lizenz: CC0
+
+
+grass1.png
+  Quelle: https://openclipart.org
+  Lizenz: Public Domain, https://openclipart.org/share
+
+
+Sonstige, nicht angegebene Abbildungen wurden selbst erstellt.
