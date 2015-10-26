@@ -8,29 +8,30 @@ var CANVAS_ID = 'maincanvas';
 var START_NEW_GAME_BUTTON_ID = 'startNewGameButton';
 
 window.onload=function() {
-	var ctx = setCanvasSizeAndReturn2DContext(CANVAS_ID, CANVAS_WIDTH, CANVAS_HEIGHT);
+	
+	setCanvasSize(CANVAS_ID, CANVAS_WIDTH, CANVAS_HEIGHT);
 	bindStartNewGameButton(START_NEW_GAME_BUTTON_ID);
 
-	showWelcomeScreen(ctx, COWLIFE_WELCOME_SCREEN_IMAGE_FILE);
+	if(typeof(canvasToInit.getContext) !== undefined) {
+		ctx = canvasToInit.getContext('2d');
+	}
+	showFullScreenPic(COWLIFE_WELCOME_SCREEN_IMAGE_FILE);
+	
 }
 
 
-
-function showWelcomeScreen(context, pathToImageFile) {
+function showFullScreenPic(pathToImageFile) {
 	var pic = new Image();
 	pic.src = pathToImageFile;
 	pic.addEventListener('load', function(){
-		context.drawImage(pic,0,0);
+		ctx.drawImage(pic,0,0);
 	});
 }
 
-function setCanvasSizeAndReturn2DContext(id, width, height) {
+function setCanvasSize(id, width, height) {
 	canvasToInit = document.getElementById(id);
 	canvasToInit.setAttribute('width', width);
 	canvasToInit.setAttribute('height', height);
-
-	var contextToReturn = canvasToInit.getContext('2d');
-	return contextToReturn;
 }
 
 function bindStartNewGameButton(id) {
@@ -39,5 +40,5 @@ function bindStartNewGameButton(id) {
 }
 
 function startNewGame() {
-	alert("new game");
+	alert('new game');
 }
