@@ -7,5 +7,7 @@ grass1.png
   Quelle: https://openclipart.org
   Lizenz: Public Domain, https://openclipart.org/share
 
+cowlife_screen.png:
+  selbst erstellt, eingebundene Kuh von oben (cow.png)
 
 Sonstige, nicht angegebene Abbildungen wurden selbst erstellt.
