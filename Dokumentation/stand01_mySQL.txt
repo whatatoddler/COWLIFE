@@ -3,12 +3,42 @@ stand01_mySQL.txt
 
 
 
-	+Tabelle für Szenen    Hintergrundbilder, welche die Szenen darstellen, Liste von enthaltenen Objekten + Position
+	+Tabelle für Szenen    Hintergrundbilder, welche die Szenen darstellen
+		
+		id SMALLINT (PRIMARY, UNIQUE)
+		name VARCHAR (UNIQUE)
+		bildlink TEXT
+		
+	+Tabelle für Objekte   	Interaktive Objekte (z.b Gras)
 	
-	+Tabelle für Objekte   	Interaktive Objekte (z.b Gras), zugehörige Event ID
+		id SMALLINT (PRIMARY, UNIQUE)
+		name VARCHAR (UNIQUE)
+		bildlink TEXT
+		eventid SMALLINT
+		
+	+Tabelle für Events     Befehle die bei Objektaktivierung ausgeführt werden sollen(z.b. zum Gras laufen, Gras essen, 					Gras löschen, Gras2(z.b. kurzes gras?) einfügen)
 	
-	+Tabelle für Events     Befehle die bei Objektaktivierung ausgeführt werden sollen(z.b. zum Gras laufen, Gras essen, Gras löschen, Gras2 einfügen)
-
-	+Tabelle für Kuh	   	Vorerst nur eine generische Kuh, Ihre/seine Animationen? später Individualisierungsparameter?
+		id SMALLINT (PIRMARY, UNIQUE)
+		name (UNIQUE)
+		code MEDIUMTEXT
 	
-	+Tabelle für Logindaten ID, Name, Email, Passwort
+	
+	// noch auszuknobeln: wo steckt die information welche objekte in sceneX und an welcher position sind? objekttabelle 		   (mit objektID, position x und position y, etc)in der Szenentabelle? 
+	   oder spalten in der scenentabelle mit einer objektid? bzw 2 oder 3 (limitiert man sich damit in der 	zukunft?)
+	   vieleicht findet man eine elegante lösung! //
+	
+	
+		
+	+Tabelle für Kuh? 
+	
+		für prototyp irrelevant -  später verschiedene Kühe? Individualisierungsparameter? not?
+	
+	
+	+Tabelle für Logindaten?	
+	   	
+	   	für den prototypen irrelevant. bei bedarf in einer späteren version oder als arbeitsbeschaffungsmaßnahme?
+	   	id SMALLINT (PRIMARY, UNIQUE)
+	   	name VARCHAR
+	   	email VARCHAR
+	   	passwort VARCHAR
+	
