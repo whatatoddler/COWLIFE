@@ -10,7 +10,6 @@ body {
 }
 
 #main {
-	display: block;
 	text-align: center;
 	margin: auto;
 }
@@ -18,5 +17,10 @@ body {
 #maincanvas {
 	border-style: solid;
 
+}
+
+#startNewGameButton, button {
+	width: 120px;
+	height: 120px;
 }
 
