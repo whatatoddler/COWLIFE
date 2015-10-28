@@ -1,3 +1,3 @@
 # COWLIFE
 
-Das nächste große Adventure.
+Das dramatische Leben einer KUH wird in fünf Akten nachgespielt.
