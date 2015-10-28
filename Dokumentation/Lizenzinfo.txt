@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+cow.png 
+  Quelle: pixabay
+  Lizenz: CC0
+play.jpg
+  Quelle: https://www.pinterest.com/pin/56365432812946470/
+=======
 ﻿cow.png 
   Quelle: pixabay
   Lizenz: CC0
@@ -11,3 +18,4 @@ cowlife_screen.png:
   selbst erstellt, eingebundene Kuh von oben (cow.png)
 
 Sonstige, nicht angegebene Abbildungen wurden selbst erstellt.
+>>>>>>> master

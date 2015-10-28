@@ -1,0 +1,22 @@
+h1 {
+	text-align: center;
+	color: rgba(200,100,100,0.8);
+	font-family: 'Goudy Old Style', Garamond, 'Big Caslon', 'Times New Roman';
+	font-size: 400%;
+}
+
+body {
+	background-color: rgba(40, 35, 30, 0.8);
+}
+
+#main {
+	display: block;
+	text-align: center;
+	margin: auto;
+}
+
+#maincanvas {
+	border-style: solid;
+
+}
+

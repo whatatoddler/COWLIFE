@@ -1,10 +1,18 @@
 Funktionalitäten:
 
+<<<<<<< HEAD
+Charaktererstellung:
+
+Die Startbedingungen (Individuelle Char Attribute, Kuh "Klasse") speichern.
+Anhand dieser wird durch eine Datenbankabfrage das darzustellende Level("Scene") ermittelt.
+
+=======
 
 Charaktererstellung (wird erst später implementiert)
 
 Die Startbedingungen (Individuelle Char Attribute,) speichern.
 Anhand dieser wird durch eine Datenbankabfrage das darzustellende Level("Scene") ermittelt.
+>>>>>>> master
 
 Scene im Canvas darstellen
 Auslesen der benötigten Werte aus der DB. 
@@ -12,6 +20,17 @@ Auslesen der benötigten Werte aus der DB.
 - Hintergrundgrafik darstellen
 	- Anhand der DB Grafik bestimmen und mit dieser das Canvas füllen
 
+<<<<<<< HEAD
+- Interaktive Objekte darstellen, diese mit Klick-Events versehen. Welche das sind, und alle weiteren notwendigen Infos wie z.B.: Grafik, Zustand des Objekts, Klick Event etc. werden aus der DB ausgelesen.	
+
+- Kuh an der Startposition darstellen.
+
+- Bei Klick auf eine leere Position in der Scene wird die Kuh bewegt "läuft zur Position"
+
+- Bei Klick auf ein interaktives Objekt wird das Event ausgeführt, welches, je nach Zustand ("State") des Objektes ein anderes sein kann. Mögliche Eventfunktionen sind u.a. : GeheZuPosition XY, PlayObjectAnimation A, ChangeStateTo S, SwitchToScene Z (Hier kann die Kuh zu einer anderen Scene wechseln.
+
+- Sounds abspielen
+=======
 - Interaktive Objekte darstellen, diese mit Klick-Events versehen. Welche das sind, und alle weiteren notwendigen Infos wie z.B.: Grafik, Klick Event etc. werden aus der DB ausgelesen. Später soll hier eine Art Scriptsprache/liste benutzt werden, um Eventchains zu ermöglichen.
 
 - Kuh an der Startposition darstellen
@@ -24,6 +43,7 @@ Auslesen der benötigten Werte aus der DB.
 
 - Sounds abspielen
 
+>>>>>>> master
 - Registrierte User: 
 	Registrierung
 		- Prüfen der eingegebenen Daten, wie Name, E-Mail, Passwort etc...
@@ -33,7 +53,10 @@ Auslesen der benötigten Werte aus der DB.
 		- Einloggen des Users
 	Speichern des Spielstandes
 	Laden des Spielstandes
+<<<<<<< HEAD
+=======
 
 
 
 - Installationsscript: Erstellt alle notwendigen MySQL Tabellen auf Knopfdruck.
+>>>>>>> master
