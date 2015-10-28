@@ -9,6 +9,16 @@ body {
 	background-color: rgba(40, 35, 30, 0.8);
 }
 
-#startNewGameButton {
-	content-align: center;
+#main {
+	display: block;
+	text-align: center;
+	width: 960px;
+	height: 840px;
+	margin: auto;
 }
+
+#maincanvas {
+	border-style: solid;
+
+}
+

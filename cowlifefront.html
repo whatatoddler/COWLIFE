@@ -7,10 +7,12 @@
 	<link rel="stylesheet" type="text/css" href="css/front.css">
 </head>
 <body>
-	<h1>COWLIFE</h1>
-	<canvas id="maincanvas">
-		Fallback Content
-	</canvas>
-	<img src="images/play.jpg" alt="playbutton" id="startNewGameButton" width="120" height="120">
+	<div id="main">
+		<h1>COWLIFE</h1>
+		<canvas id="maincanvas" width="960" height="540">
+				Fallback Content
+		</canvas>	
+		<img onclick="startNewGame()" src="images/play.jpg" alt="playbutton" id="startNewGameButton" width="120" height="120">
+	</div>
 </body>
 </html>
