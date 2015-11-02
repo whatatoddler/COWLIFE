@@ -1,7 +1,10 @@
 
 // Temporäre Konstanten
 
-var FPS = 30;
+var FPS = 60;
+
+var PLAYER_MOVEMENT_SPEED = 100; // Pixels per second;
+var PLAYER_MOVE_TARGET_DEAD_ZONE = 20;
 
 var CANVAS_WIDTH = 1280;
 var CANVAS_HEIGHT = 720;
@@ -130,12 +133,28 @@ function Player() {
 	this.name = PLAYER_NAME;
 	this.positionX = PLAYER_START_POSITION_X,
 	this.positionY = PLAYER_START_POSITION_Y,
+	this.targetPositionx = this.positionY;
+	this.direction = 'right';
+	this. isMoving = false;
 	this.imagePath = PLAYER_COW_PIC;
 	this.image = new Image();
 	this.image.src = this.imagePath;
 	var self = this;
 
 	this.update = function() {
+		if( (this.targetPositionx - PLAYER_MOVE_TARGET_DEAD_ZONE) > this.positionX) {
+			this.direction = 'right';
+			this.isMoving = true;
+			this.positionX += PLAYER_MOVEMENT_SPEED / FPS;
+		} 
+		else if((this.targetPositionx + PLAYER_MOVE_TARGET_DEAD_ZONE) < this.positionX) {
+			this.direction = 'left';
+			this.isMoving = true;
+			this.positionX -= PLAYER_MOVEMENT_SPEED / FPS;
+		}
+		else {
+			this.isMoving = false;
+		}
 
 	}
 
@@ -144,7 +163,8 @@ function Player() {
 	}
 
 	this.moveTo = function(x,y) {
-		alert('X: ' + x + ' Y: ' + y);
+		//alert('X: ' + x + ' Y: ' + y);
+		this.targetPositionx = x;
 	}	
 }
 
