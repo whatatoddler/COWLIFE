@@ -48,8 +48,8 @@ window.onload=function() {
 function onCanvasClick(event) {
 	var x = event.clientX - canvas.offsetLeft + window.scrollX;
 	var y = event.clientY - canvas.offsetTop + window.scrollY;
-
-	alert('X: ' + x + ' Y: ' + y);
+	player.moveTo(x,y);
+	//alert('X: ' + x + ' Y: ' + y);
 }
 
 
@@ -122,10 +122,15 @@ function Player() {
 	this.imagePath = PLAYER_COW_PIC;
 	this.image = new Image();
 	this.image.src = this.imagePath;
+	var self = this;
 
 	this.draw = function() {
 		ctx.drawImage(this.image, this.positionX,  this.positionY);
 	}
+
+	this.moveTo = function(x,y) {
+		alert('X: ' + x + ' Y: ' + y);
+	}	
 }
 
 
