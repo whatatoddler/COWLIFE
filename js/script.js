@@ -10,8 +10,7 @@ var START_NEW_GAME_BUTTON_ID = 'startNewGameButton';
 
 
 
-var PLAYER_COW_PIC = 'images/cow.png';
-var PLAYER_COW_ANIMATION = 'images/cow_walking.png';
+var PLAYER_COW_PIC= 'images/cow.png';
 var PLAYER_START_POSITION_X = 50;
 var PLAYER_START_POSITION_Y = 500;
 var PLAYER_NAME = "Superkuh";
@@ -38,19 +37,13 @@ window.onload=function() {
 	bindElementWithClickFunction('clearButton', 'clearScreen()');
 	bindElementWithClickFunction('drawButton', 'draw()');
 
-
-	if(typeof(canvasToInit.getContext) !== undefined) { // nicht schön, soll Fehler abfangen
+	if(typeof(canvasToInit.getContext) !== undefined) {
 		ctx = canvasToInit.getContext('2d');
 	}
 	loadAndDrawBgImageReturnImage(COWLIFE_WELCOME_SCREEN_IMAGE_FILE);
 }
 
-// setzt HTML Sttribute für Canvas width/height  (soll überarbeitet werden)
-function setCanvasSize(id, width, height) {
-	canvasToInit = document.getElementById(id);
-	canvasToInit.setAttribute('width', width);
-	canvasToInit.setAttribute('height', height);
-}
+
 
 // zeichnet ein Bild ins Canvas
 function loadAndDrawBgImageReturnImage(pathToImageFile) {
@@ -61,7 +54,12 @@ function loadAndDrawBgImageReturnImage(pathToImageFile) {
 	return pic;
 }
 
-
+// setzt HTML Sttribute für Canvas width/height
+function setCanvasSize(id, width, height) {
+	canvasToInit = document.getElementById(id);
+	canvasToInit.setAttribute('width', width);
+	canvasToInit.setAttribute('height', height);
+}
 
 // bindet onclick Event auf Start Button
 function bindStartNewGameButton(id) {
@@ -81,13 +79,11 @@ function startNewGame() {
 }
 
 
+//Objekte
+
 function draw() {
 	scene.draw();
 }
-
-
-//Objekte
-
 
 // Das Scene Objekt
 function Scene(sceneID) {
@@ -101,7 +97,6 @@ function Scene(sceneID) {
 	this.start = function() { // startet die Scene
 		clearScreen();
 		player = new Player();
-
 	},
 
 	this.draw = function() {
@@ -116,9 +111,7 @@ function Player() {
 	this.name = PLAYER_NAME;
 	this.positionX = PLAYER_START_POSITION_X,
 	this.positionY = PLAYER_START_POSITION_Y,
-	this.targetPositionX = this.positionX;
-	this.targetPositionY = this.positionY;
-	this.imagePath = PLAYER_COW_ANIMATION;
+	this.imagePath = PLAYER_COW_PIC;
 	this.image = new Image();
 	this.image.src = this.imagePath;
 
