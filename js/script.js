@@ -37,8 +37,8 @@ window.onload=function() {
 	bindElementWithClickFunction('clearButton', 'clearScreen()');
 	bindElementWithClickFunction('drawButton', 'draw()');
 
-	if(typeof(canvasToInit.getContext) !== undefined) {
-		ctx = canvasToInit.getContext('2d');
+	if(typeof(canvas.getContext) !== undefined) {
+		ctx = canvas.getContext('2d');
 	}
 	loadAndDrawBgImageReturnImage(COWLIFE_WELCOME_SCREEN_IMAGE_FILE);
 }
@@ -56,9 +56,9 @@ function loadAndDrawBgImageReturnImage(pathToImageFile) {
 
 // setzt HTML Sttribute für Canvas width/height
 function setCanvasSize(id, width, height) {
-	canvasToInit = document.getElementById(id);
-	canvasToInit.setAttribute('width', width);
-	canvasToInit.setAttribute('height', height);
+	canvas = document.getElementById(id);
+	canvas.setAttribute('width', width);
+	canvas.setAttribute('height', height);
 }
 
 // bindet onclick Event auf Start Button
