@@ -1,5 +1,11 @@
 
 // Temporäre Konstanten
+
+var FPS = 60;
+
+var PLAYER_MOVEMENT_SPEED = 100; // Pixels per second;
+var PLAYER_MOVE_TARGET_DEAD_ZONE = 20;
+
 var CANVAS_WIDTH = 1280;
 var CANVAS_HEIGHT = 720;
 var COWLIFE_WELCOME_SCREEN_IMAGE_FILE= 'images/cowlife_screen.png';
@@ -36,13 +42,21 @@ window.onload=function() {
 	bindElementWithClickFunction(START_NEW_GAME_BUTTON_ID, 'startNewGame()');
 	bindElementWithClickFunction('clearButton', 'clearScreen()');
 	bindElementWithClickFunction('drawButton', 'draw()');
+	canvas.addEventListener('click', onCanvasClick, false);
 
-	if(typeof(canvasToInit.getContext) !== undefined) {
-		ctx = canvasToInit.getContext('2d');
+	if(typeof(canvas.getContext) !== undefined) {
+		ctx = canvas.getContext('2d');
 	}
 	loadAndDrawBgImageReturnImage(COWLIFE_WELCOME_SCREEN_IMAGE_FILE);
 }
 
+
+function onCanvasClick(event) {
+	var x = event.clientX - canvas.offsetLeft + window.scrollX;
+	var y = event.clientY - canvas.offsetTop + window.scrollY;
+	player.moveTo(x,y);
+	//alert('X: ' + x + ' Y: ' + y);
+}
 
 
 // zeichnet ein Bild ins Canvas
@@ -56,9 +70,9 @@ function loadAndDrawBgImageReturnImage(pathToImageFile) {
 
 // setzt HTML Sttribute für Canvas width/height
 function setCanvasSize(id, width, height) {
-	canvasToInit = document.getElementById(id);
-	canvasToInit.setAttribute('width', width);
-	canvasToInit.setAttribute('height', height);
+	canvas = document.getElementById(id);
+	canvas.setAttribute('width', width);
+	canvas.setAttribute('height', height);
 }
 
 // bindet onclick Event auf Start Button
@@ -82,6 +96,7 @@ function startNewGame() {
 //Objekte
 
 function draw() {
+	scene.update();
 	scene.draw();
 }
 
@@ -93,16 +108,23 @@ function Scene(sceneID) {
 	this.backgroundPath = SCENE_BG_PATH[sceneID],
 	this.image = new Image(),
 	this.image.src = this.backgroundPath, 
-
+ 
 	this.start = function() { // startet die Scene
 		clearScreen();
 		player = new Player();
+
+		setInterval(draw, 1000/FPS); // Gameloop, sollte this.draw aufrufen, klappt noch nicht, deshalb der Umweg.
+	},
+
+	this.update = function() {
+		player.update();
 	},
 
 	this.draw = function() {
 		ctx.drawImage(this.image, 0, 0);
 		player.draw();
 	}
+
 
 }
 
@@ -111,13 +133,39 @@ function Player() {
 	this.name = PLAYER_NAME;
 	this.positionX = PLAYER_START_POSITION_X,
 	this.positionY = PLAYER_START_POSITION_Y,
+	this.targetPositionx = this.positionY;
+	this.direction = 'right';
+	this. isMoving = false;
 	this.imagePath = PLAYER_COW_PIC;
 	this.image = new Image();
 	this.image.src = this.imagePath;
+	var self = this;
+
+	this.update = function() {
+		if( (this.targetPositionx - PLAYER_MOVE_TARGET_DEAD_ZONE) > this.positionX) {
+			this.direction = 'right';
+			this.isMoving = true;
+			this.positionX += PLAYER_MOVEMENT_SPEED / FPS;
+		} 
+		else if((this.targetPositionx + PLAYER_MOVE_TARGET_DEAD_ZONE) < this.positionX) {
+			this.direction = 'left';
+			this.isMoving = true;
+			this.positionX -= PLAYER_MOVEMENT_SPEED / FPS;
+		}
+		else {
+			this.isMoving = false;
+		}
+
+	}
 
 	this.draw = function() {
 		ctx.drawImage(this.image, this.positionX,  this.positionY);
 	}
+
+	this.moveTo = function(x,y) {
+		//alert('X: ' + x + ' Y: ' + y);
+		this.targetPositionx = x;
+	}	
 }
 
 
