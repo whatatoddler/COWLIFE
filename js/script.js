@@ -1,5 +1,8 @@
 
 // Temporäre Konstanten
+
+var FPS = 30;
+
 var CANVAS_WIDTH = 1280;
 var CANVAS_HEIGHT = 720;
 var COWLIFE_WELCOME_SCREEN_IMAGE_FILE= 'images/cowlife_screen.png';
@@ -90,6 +93,7 @@ function startNewGame() {
 //Objekte
 
 function draw() {
+	scene.update();
 	scene.draw();
 }
 
@@ -101,16 +105,23 @@ function Scene(sceneID) {
 	this.backgroundPath = SCENE_BG_PATH[sceneID],
 	this.image = new Image(),
 	this.image.src = this.backgroundPath, 
-
+ 
 	this.start = function() { // startet die Scene
 		clearScreen();
 		player = new Player();
+
+		setInterval(draw, 1000/FPS); // Gameloop, sollte this.draw aufrufen, klappt noch nicht, deshalb der Umweg.
+	},
+
+	this.update = function() {
+		player.update();
 	},
 
 	this.draw = function() {
 		ctx.drawImage(this.image, 0, 0);
 		player.draw();
 	}
+
 
 }
 
@@ -123,6 +134,10 @@ function Player() {
 	this.image = new Image();
 	this.image.src = this.imagePath;
 	var self = this;
+
+	this.update = function() {
+
+	}
 
 	this.draw = function() {
 		ctx.drawImage(this.image, this.positionX,  this.positionY);
