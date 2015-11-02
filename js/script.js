@@ -36,6 +36,7 @@ window.onload=function() {
 	bindElementWithClickFunction(START_NEW_GAME_BUTTON_ID, 'startNewGame()');
 	bindElementWithClickFunction('clearButton', 'clearScreen()');
 	bindElementWithClickFunction('drawButton', 'draw()');
+	canvas.addEventListener('click', onCanvasClick, false);
 
 	if(typeof(canvas.getContext) !== undefined) {
 		ctx = canvas.getContext('2d');
@@ -43,6 +44,13 @@ window.onload=function() {
 	loadAndDrawBgImageReturnImage(COWLIFE_WELCOME_SCREEN_IMAGE_FILE);
 }
 
+
+function onCanvasClick(event) {
+	var x = event.clientX - canvas.offsetLeft;
+	var y = event.clientY - canvas.offsetTop;
+
+	alert('X: ' + x + ' Y: ' + y);
+}
 
 
 // zeichnet ein Bild ins Canvas
