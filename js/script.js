@@ -46,8 +46,8 @@ window.onload=function() {
 
 
 function onCanvasClick(event) {
-	var x = event.clientX - canvas.offsetLeft;
-	var y = event.clientY - canvas.offsetTop;
+	var x = event.clientX - canvas.offsetLeft + window.scrollX;
+	var y = event.clientY - canvas.offsetTop + window.scrollY;
 
 	alert('X: ' + x + ' Y: ' + y);
 }
