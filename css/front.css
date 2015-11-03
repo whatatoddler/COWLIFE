@@ -1,12 +1,6 @@
-h1 {
-	text-align: center;
-	color: rgba(200,100,100,0.8);
-	font-family: 'Goudy Old Style', Garamond, 'Big Caslon', 'Times New Roman';
-	font-size: 400%;
-}
-
 body {
 	background-color: rgba(40, 35, 30, 0.8);
+	font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;
 }
 
 #main {
@@ -16,16 +10,38 @@ body {
 
 #maincanvas {
 	border-style: solid;
-
+	border-color: gray;
+	border-width: 1px;
 }
 
 #startNewGameButton {
-	width: 120px;
-	height: 120px;
+	border-style: solid;
+	border-color: gray;
+	border-width: 1px;
+	background-color: rgba(40, 35, 30, 0);
+	vertical-align: -22px;
+	width: 60px;
+	height: 58px;
 }
 
 button {
-	width: 60px;
-	height: 40px;
+	font-size: 140%;
+	color: white;
+	border-style: solid;
+	border-color: gray;
+	border-width: 1px;
+	background-color: rgba(40, 35, 30, 0);
+	width: 90px;
+	height: 60px;
+}
+footer {
+	text-align: center;
+	color: white;
+}
+a:link {
+	color: white;
 }
 
+a:visited {
+	color: rgba(200,100,100,0.8);
+}
