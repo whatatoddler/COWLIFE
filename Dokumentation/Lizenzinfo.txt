@@ -1,4 +1,4 @@
-﻿cow.png 
+cow.png 
   Quelle: pixabay
   Lizenz: CC0
 
@@ -9,5 +9,8 @@ grass1.png
 
 cowlife_screen.png:
   selbst erstellt, eingebundene Kuh von oben (cow.png)
+
+play.png
+  Quelle: findicons.com
 
 Sonstige, nicht angegebene Abbildungen wurden selbst erstellt.
