@@ -1,4 +1,4 @@
-<? 
+<?php
 	/*	Dies ist eine Vorlage zum Eintragen der sensiblen MySQL Daten.
 	 *  
 	 *  Achtung: niemals Passwörter ins Repository pushen. Diese Datei Lokal anpassen
