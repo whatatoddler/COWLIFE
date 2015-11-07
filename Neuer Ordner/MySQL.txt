@@ -7,39 +7,34 @@ CREATE DATABASE cowlife;
 
 CREATE TABLE scenes
 (
-id SMALLINT,
-name VARCHAR,
-picturelink TEXT,
-objectid SMALLINT,
-object2id SMALLINT,
-object3id SMALLINT,
-object4id SMALLINT,
-object5id SMALLINT,
-position1x SMALLINT,
-position2x SMALLINT,
-position3x SMALLINT,
-position4x SMALLINT,
-position5x SMALLINT,
-position1y SMALLINT,
-position2y SMALLINT,
-position3y SMALLINT,
-position4y SMALLINT,
-position5y SMALLINT,
-UNIQUE(id, name),
-PRIMARY KEY (id)
+id INT(25) UNIQUE PRIMARY KEY,
+name VARCHAR(30) NOT NULL UNIQUE,
+picturelink TEXT(240) NOT NULL,
+objectid SMALLINT(25),
+object2id SMALLINT(25),
+object3id SMALLINT(25),
+object4id SMALLINT(25),
+object5id SMALLINT(25),
+position1x SMALLINT(9000),
+position2x SMALLINT(9000),
+position3x SMALLINT(9000),
+position4x SMALLINT(9000),
+position5x SMALLINT(9000),
+position1y SMALLINT(9000),
+position2y SMALLINT(9000),
+position3y SMALLINT(9000),
+position4y SMALLINT(9000),
+position5y SMALLINT(9000)
 );
 
 -----
 
 CREATE TABLE objects
 (
-id SMALLINT(size),
-picturelink TEXT,
-eventid SMALLINT(size),
-name VARCHAR(size),
-position SMALLINT,
-UNIQUE(id, name),
-PRIMARY KEY (id)
+id SMALLINT(25) UNIQUE NOT NULL PRIMARY KEY,
+picturelink TEXT(240)NOT NULL,
+eventid SMALLINT(25),
+name VARCHAR(30)NOT NULL UNIQUE,
 );
 
 
@@ -47,10 +42,8 @@ PRIMARY KEY (id)
 
 CREATE TABLE events
 (
-ID SMALLINT(size),
-NAME VARCHAR(size),
-CODE MEDIUMTEXT,
-UNIQUE(id, name),
-PRIMARY KEY (id)
+id SMALLINT(25)NOT NULL UNIQUE PRIMARY KEY,
+name VARCHAR(30)NOT NULL UNIQUE,
+code TEXT(500),
 );
 
