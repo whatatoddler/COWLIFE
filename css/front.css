@@ -25,6 +25,7 @@ body {
 }
 
 button {
+	visibility: hidden;
 	font-size: 140%;
 	color: white;
 	border-style: solid;
