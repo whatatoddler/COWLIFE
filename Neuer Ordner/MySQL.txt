@@ -15,16 +15,16 @@ object2id SMALLINT(25),
 object3id SMALLINT(25),
 object4id SMALLINT(25),
 object5id SMALLINT(25),
-position1x SMALLINT(9000),
-position2x SMALLINT(9000),
-position3x SMALLINT(9000),
-position4x SMALLINT(9000),
-position5x SMALLINT(9000),
-position1y SMALLINT(9000),
-position2y SMALLINT(9000),
-position3y SMALLINT(9000),
-position4y SMALLINT(9000),
-position5y SMALLINT(9000)
+position1x SMALLINT(1280)
+position2x SMALLINT(1280),
+position3x SMALLINT(1280),
+position4x SMALLINT(1280),
+position5x SMALLINT(1280),
+position1y SMALLINT(720),
+position2y SMALLINT(720),
+position3y SMALLINT(720),
+position4y SMALLINT(720),
+position5y SMALLINT(720)
 );
 
 -----
