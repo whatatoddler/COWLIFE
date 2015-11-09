@@ -39,9 +39,7 @@ var ctx;
 window.onload=function() {
 	
 	setCanvasSize(CANVAS_ID, CANVAS_WIDTH, CANVAS_HEIGHT);
-	bindElementWithClickFunction(START_NEW_GAME_BUTTON_ID, 'startNewGame()');
-	bindElementWithClickFunction('clearButton', 'clearScreen()');
-	bindElementWithClickFunction('drawButton', 'draw()');
+	
 	canvas.addEventListener('click', onCanvasClick, false);
 
 	if(typeof(canvas.getContext) !== undefined) {
