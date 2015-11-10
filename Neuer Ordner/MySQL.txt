@@ -10,31 +10,31 @@ CREATE TABLE scenes
 id INT(25) UNIQUE PRIMARY KEY,
 name VARCHAR(30) NOT NULL UNIQUE,
 picturelink TEXT(240) NOT NULL,
-objectid SMALLINT(25),
-object2id SMALLINT(25),
-object3id SMALLINT(25),
-object4id SMALLINT(25),
-object5id SMALLINT(25),
-position1x SMALLINT(1280)
-position2x SMALLINT(1280),
-position3x SMALLINT(1280),
-position4x SMALLINT(1280),
-position5x SMALLINT(1280),
-position1y SMALLINT(720),
-position2y SMALLINT(720),
-position3y SMALLINT(720),
-position4y SMALLINT(720),
-position5y SMALLINT(720)
+objectid INT(25),
+object2id INT(25),
+object3id INT(25),
+object4id INT(25),
+object5id INT(25),
+position1x INT(1280)
+position2x INT(1280),
+position3x INT(1280),
+position4x INT(1280),
+position5x INT(1280),
+position1y INT(720),
+position2y INT(720),
+position3y INT(720),
+position4y INT(720),
+position5y INT(720)
 );
 
 -----
 
 CREATE TABLE objects
 (
-id SMALLINT(25) UNIQUE NOT NULL PRIMARY KEY,
+id INT(25) UNIQUE NOT NULL PRIMARY KEY,
 picturelink TEXT(240)NOT NULL,
-eventid SMALLINT(25),
-name VARCHAR(30)NOT NULL UNIQUE,
+eventid INT(25),
+name VARCHAR(30)NOT NULL UNIQUE
 );
 
 
@@ -42,8 +42,8 @@ name VARCHAR(30)NOT NULL UNIQUE,
 
 CREATE TABLE events
 (
-id SMALLINT(25)NOT NULL UNIQUE PRIMARY KEY,
+id INT(25)NOT NULL UNIQUE PRIMARY KEY,
 name VARCHAR(30)NOT NULL UNIQUE,
-code TEXT(500),
+code TEXT(500)
 );
 
