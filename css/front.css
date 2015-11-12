@@ -45,3 +45,8 @@ a:link {
 a:visited {
 	color: rgba(200,100,100,0.8);
 }
+
+#row1 {
+	width: 400px;
+	height: 800px;
+}
