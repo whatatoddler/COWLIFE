@@ -46,9 +46,19 @@ position5y INT
 			echo ('Fehler beim Erzeugen der Tabelle: ') . mysqli_error($connection);	
 		}
 
-		//
+		
 
-	    $query = ' ';		// HIER MYSQL QUERY EINFÜGEN
+	    $query = 'CREATE TABLE objects
+(
+id INT UNIQUE PRIMARY KEY NOT NULL,
+picturelink TEXT(240)NOT NULL,
+eventid INT,
+name VARCHAR(30)NOT NULL UNIQUE
+)
+
+
+
+ ';		
 
 		if(mysqli_query($connection, $query)) {
 			echo ('<br>Tabelle erzeugt.');
@@ -58,9 +68,15 @@ position5y INT
 			echo ('<br><br>Fehler beim Erzeugen der Tabelle: ') . mysqli_error($connection);	
 		}
 
-		//
+		
 
-	    $query = ' ' ;		// HIER MYSQL QUERY EINFÜGEN
+	    $query = 'CREATE TABLE events
+(
+id INT UNIQUE PRIMARY KEY NOT NULL,
+name VARCHAR(30)NOT NULL UNIQUE,
+code TEXT(500)
+)
+ ' ;	
 
 		if(mysqli_query($connection, $query)) {
 			echo ('<br>Tabelle erzeugt.');
