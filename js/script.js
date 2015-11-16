@@ -21,18 +21,22 @@ var PLAYER_NAME = "Superkuh";
 
 
 
-//SCENE Vars
+// Temp SCENE Vars
 var SCENE_BG_PATH = 'images/sc1_bg.png';
 var SCENE_NAME = 'Day of the Cow';
-var OBJECT_ID = [];
-var OBJECT_POSITION_X = [];
-var OBJECT_POSITION_Y = [];
+var SCENE_OBJECT_ID = [];
+var SCENE_OBJECT_POSITION_X = [];
+var SCENE_OBJECT_POSITION_Y = [];
 
-
+// Temp OBJECT vars 
 var OBJECT_PIC_PATH = [];
 var OBJECT_NAME = [];
+var OBJECT_EVENT_ID = [];
+
 OBJECT_PIC_PATH[0] = 'images/grass1.png';
 OBJECT_NAME[0] = 'Grasbüschel';
+OBJECT_EVENT_ID[0] = 0;
+
 
 var ctx;
 
