@@ -22,10 +22,8 @@ var PLAYER_NAME = "Superkuh";
 
 
 //SCENE Vars
-var SCENE_BG_PATH = [];
-var SCENE_NAME =[];
-SCENE_BG_PATH[0] = 'images/sc1_bg.png';
-SCENE_NAME[0] = 'Day of the Cow';
+var SCENE_BG_PATH = 'images/sc1_bg.png';
+var SCENE_NAME = 'Day of the Cow';
 var OBJECT_ID = [];
 var OBJECT_POSITION_X = [];
 var OBJECT_POSITION_Y = [];
@@ -105,8 +103,8 @@ function draw() {
 function Scene(sceneID) {
 	
 	this.id = sceneID,
-	this.name = SCENE_NAME[sceneID],
-	this.backgroundPath = SCENE_BG_PATH[sceneID],
+	this.name = SCENE_NAME,
+	this.backgroundPath = SCENE_BG_PATH,
 	this.image = new Image(),
 	this.image.src = this.backgroundPath, 
  
