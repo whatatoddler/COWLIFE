@@ -14,22 +14,25 @@ var CANVAS_ID = 'maincanvas';
 var START_NEW_GAME_BUTTON_ID = 'startNewGameButton';
 
 
-
-
 var PLAYER_COW_PIC= 'images/cow.png';
 var PLAYER_START_POSITION_X = 50;
 var PLAYER_START_POSITION_Y = 500;
 var PLAYER_NAME = "Superkuh";
 
+
+
+//SCENE Vars
 var SCENE_BG_PATH = [];
 var SCENE_NAME =[];
-
 SCENE_BG_PATH[0] = 'images/sc1_bg.png';
 SCENE_NAME[0] = 'Day of the Cow';
+var OBJECT_ID = [];
+var OBJECT_POSITION_X = [];
+var OBJECT_POSITION_Y = [];
+
 
 var OBJECT_PIC_PATH = [];
 var OBJECT_NAME = [];
-
 OBJECT_PIC_PATH[0] = 'images/grass1.png';
 OBJECT_NAME[0] = 'Grasbüschel';
 
