@@ -19,10 +19,15 @@ var PLAYER_MOVE_TARGET_DEAD_ZONE = 20;
 var PLAYER_NAME = "Superkuh";
 
 // SCENE Variablen, sollen aus der DB ausgelesen werden
+var SCENE_NAME = [];
 var SCENE_BG_PATH = [];
-var SCENE_NAME =[];
-var SCENE_BG_PATH[0] = 'images/sc1_bg.png';
-var SCENE_NAME[0] = 'Day of the Cow';
+var OBJECT_ID = [];
+var OBJECT_POSITION_X = [];
+var OBJECT_POSITION_Y = [];
+
+SCENE_NAME[0] = 'Day of the Cow';
+SCENE_BG_PATH[0] = 'images/sc1_bg.png';
+
 
 // OBJECT Variablen, sollen aus der DB ausgelesen werden
 var OBJECT_PIC_PATH = [];
