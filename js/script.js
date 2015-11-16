@@ -3,38 +3,34 @@
 
 var FPS = 60;
 
-var PLAYER_MOVEMENT_SPEED = 100; // Pixels per second;
-var PLAYER_MOVE_TARGET_DEAD_ZONE = 20;
+var CANVAS_ID = 'maincanvas';
+var START_NEW_GAME_BUTTON_ID = 'startNewGameButton';
 
 var CANVAS_WIDTH = 1280;
 var CANVAS_HEIGHT = 720;
 var COWLIFE_WELCOME_SCREEN_IMAGE_FILE= 'images/cowlife_screen.png';
 
-var CANVAS_ID = 'maincanvas';
-var START_NEW_GAME_BUTTON_ID = 'startNewGameButton';
-
-
-
-
+// PLAYER VARIABLEN
 var PLAYER_COW_PIC= 'images/cow.png';
 var PLAYER_START_POSITION_X = 50;
 var PLAYER_START_POSITION_Y = 500;
+var PLAYER_MOVEMENT_SPEED = 100; // Pixels per second;
+var PLAYER_MOVE_TARGET_DEAD_ZONE = 20;
 var PLAYER_NAME = "Superkuh";
 
+// SCENE Variablen, sollen aus der DB ausgelesen werden
 var SCENE_BG_PATH = [];
 var SCENE_NAME =[];
+var SCENE_BG_PATH[0] = 'images/sc1_bg.png';
+var SCENE_NAME[0] = 'Day of the Cow';
 
-SCENE_BG_PATH[0] = 'images/sc1_bg.png';
-SCENE_NAME[0] = 'Day of the Cow';
-
+// OBJECT Variablen, sollen aus der DB ausgelesen werden
 var OBJECT_PIC_PATH = [];
 var OBJECT_NAME = [];
+var OBJECT_PIC_PATH[0] = 'images/grass1.png';
+var OBJECT_NAME[0] = 'Grasbüschel';
 
-OBJECT_PIC_PATH[0] = 'images/grass1.png';
-OBJECT_NAME[0] = 'Grasbüschel';
-
-var ctx;
-
+var ctx; // Dies wird der 2d-Context des Canvas
 
 window.onload=function() {
 	
