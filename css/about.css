@@ -1,5 +1,5 @@
 body {
-	background-color: rgba(40, 35, 30, 0.8);
+	background-color: rgba(40, 35, 30, 0.85);
 	font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;
 	color: white;
 }
@@ -28,6 +28,8 @@ h1, h2, h3 {
 }
 
 .float {
-	border-style: solid;
-	border-width: 1px;
+	border-left-style: dashed;
+	border-width: 3px;
+	padding-left: 5px;
+	border-color: rgba(200,100,100,0.8);
 }
