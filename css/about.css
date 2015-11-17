@@ -4,31 +4,79 @@ body {
 	color: white;
 }
 
+header {
+	text-align: center;
+	font-size: 85%;
+}
+
 h1, h2, h3 {
 	color: rgba(200,100,100,0.8);
 }
 
+h1 {
+	margin-bottom: 10px;
+	font-size: 300%;
+	text-align: center;
+	min-width: 740px;
+}
+
+h2 {
+	margin-left: 10px;
+}
+
+h3 {
+	margin-left: 20px;
+}
+
+#style {
+	margin: auto;
+	max-width: 1073px;
+}
+
+#main {
+	text-align: justify;
+	margin: 30px 50px;
+	min-width: 640px;
+	max-width: 973px;
+}
+
+#members {
+	height: 100px;
+	min-width: 750px;
+	margin-left: 40px;
+}
 #row1 {
 	float: left;
-	width: 400px;
+	width: 300px;
 	height: 300px;
 }
 
 #row2 {
 	float: left;
-	width: 400px;
+	width: 300px;
 	height: 300px;
 }
 
 #row3 {
 	float: left;
-	width: 400px;
+	width: 300px;
 	height: 300px;
 }
 
 .float {
+	text-align: justify;
+	margin: 4px 10px;
+	font-size: 90%;
 	border-left-style: dashed;
 	border-width: 3px;
 	padding-left: 5px;
 	border-color: rgba(200,100,100,0.8);
+}
+
+a:link {
+	color: white;
+}
+
+a:visited {
+	color: rgba(200,100,100,0.8);
 }
