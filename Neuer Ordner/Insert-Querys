@@ -1,8 +1,8 @@
 
-INSERT INTO cowfart.scenes(id, name, picturelink, objectid, object2id, object3id, object4id, object5id , position1x , position2x , position3x , position4x , position5x , position1y, position2y , position3y , position4y , position5y ) 
+INSERT INTO cowlife.scenes(id, name, picturelink, objectid, object2id, object3id, object4id, object5id , position1x , position2x , position3x , position4x , position5x , position1y, position2y , position3y , position4y , position5y ) 
 VALUES ("1", "Day of the Cow", "images/sc1_bg.png", "1", "0", "0", "0", "0", "250", "0","0","0","0", "250", "0","0","0","0")
 
 
 
-INSERT INTO cowfart.objects (id, picturelink, eventid, name)
+INSERT INTO cowlife.objects (id, picturelink, eventid, name)
 VALUES("1", "images/grass1.png", "1", "Gras01");
