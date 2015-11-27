@@ -4,3 +4,14 @@ Zwei Ansichten:
 Erste Ansicht: "Startbildschirm", Titel (head), Untertitel (head), kurze Beschreibung des Spiels (body), Startbutton (button, img, etc.)
 
 Zweite Ansicht: Eigentliches Spiel in canvas-Element. Eventuell Titel (head)
+
+=== Feedback Alpers, nov 27 ===
+
+Liebe/r Studierende/r,
+
+wo sind die übrigen Dokumenationsdateien? Was haben Sie von Woche zu Woche am Projekt geändert? Warum haben Sie welche Entscheidungen getroffen?
+
+Nochmal zur Erinnerung: Ihre Aufgabe im Team besteht darin, die Elemente zu definieren, aus denen die Anwendung (bzw. das Spiel) zusammen gesetzt wird. Bislang haben Sie in HTML lediglich drei Seiten entworfen, in denen ersatzweise Text eingeblendet wird. Da in Ihrer Gruppe eine DB-Anbindung realisiert wird, sollten Sie eine Registrierung und einen Log-In erstellen. Dann wäre eine Seite bzw. Einblendung zum Laden und Speichern des aktuellen Spielstands gut. Weiterhin fehlt da noch eine Anleitung zum Spiel. Und das wären nur erste Ideen. Arbeiten Sie da noch mehr aus, dokumentieren Sie das. Setzen Sie all das in HTML um, was davon in HTML umsetzbar ist. Und auch hier gilt wieder: Dokumentieren Sie kontinuierlich Ihren Fortschritt und die Gründe für Ihre Entscheidungen.
+
+Viele Grüße,
+Markus Alpers

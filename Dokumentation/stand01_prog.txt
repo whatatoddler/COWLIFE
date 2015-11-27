@@ -46,4 +46,15 @@ Dazu gehört:
 
 - Installationsscript: Erstellt alle notwendigen MySQL Tabellen auf Knopfdruck, für eine saubere und einfache Installation.
 
+=== Kommentar Alpers, nov 27 ===
 
+Liebe/r Studierende/r,
+
+bitte denken Sie daran, kontinuierlich (also in jeweils neuen Dateien) die Entwicklung der Projektarbeit zu dokumentieren. Beschreiben Sie bitte, welche Schritte Sie als nächstes umsetzen wollen. Die Bewegung nach links/rechts funktioniert ja.
+
+Ansonsten sieht Ihr Teil schon recht gut aus und ich denke, dass Sie gar nicht mehr so viel machen müssen.
+
+Unter Umständen sollten Sie im Teammeeting nochmal ein bischen mehr darüber sprechen, was Ihr HTML'er noch tun kann und wie Sie die Datenbank in das Projekt einbinden.
+
+Viele Grüße,
+Markus Alpers
