@@ -1,0 +1,9 @@
+Stand aktuell:
+
+Scene wird generiert, noch aus temporären Daten.
+
+Diese Daten sollen im nächsten Schritt direkt aus der DB ausgelesen werden.
+
+Damit dieses ohne Neuladen der Seite geschieht soll das JS per Ajax einen Http POST Request an das Script "loadscene.php" senden.
+
+Dieses Script liest die Daten einer Scene aus der DB aus und gibt diese an das JS zurück.
