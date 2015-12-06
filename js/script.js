@@ -14,24 +14,29 @@ var CANVAS_ID = 'maincanvas';
 var START_NEW_GAME_BUTTON_ID = 'startNewGameButton';
 
 
-
-
 var PLAYER_COW_PIC= 'images/cow.png';
 var PLAYER_START_POSITION_X = 50;
 var PLAYER_START_POSITION_Y = 500;
 var PLAYER_NAME = "Superkuh";
 
-var SCENE_BG_PATH = [];
-var SCENE_NAME =[];
 
-SCENE_BG_PATH[0] = 'images/sc1_bg.png';
-SCENE_NAME[0] = 'Day of the Cow';
 
+// Temp SCENE Vars
+var SCENE_BG_PATH = 'images/sc1_bg.png';
+var SCENE_NAME = 'Day of the Cow';
+var SCENE_OBJECT_ID = [];
+var SCENE_OBJECT_POSITION_X = [];
+var SCENE_OBJECT_POSITION_Y = [];
+
+// Temp OBJECT vars 
 var OBJECT_PIC_PATH = [];
 var OBJECT_NAME = [];
+var OBJECT_EVENT_ID = [];
 
 OBJECT_PIC_PATH[0] = 'images/grass1.png';
 OBJECT_NAME[0] = 'Grasbüschel';
+OBJECT_EVENT_ID[0] = 0;
+
 
 var ctx;
 
@@ -102,8 +107,8 @@ function draw() {
 function Scene(sceneID) {
 	
 	this.id = sceneID,
-	this.name = SCENE_NAME[sceneID],
-	this.backgroundPath = SCENE_BG_PATH[sceneID],
+	this.name = SCENE_NAME,
+	this.backgroundPath = SCENE_BG_PATH,
 	this.image = new Image(),
 	this.image.src = this.backgroundPath, 
  
