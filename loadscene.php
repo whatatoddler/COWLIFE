@@ -7,7 +7,7 @@ Es werden die notwendigen Daten für eine Scene ausgelesen und die Daten werden 
 
 */
 
-if($_SERVER["REQUEST_METHOD"] == "POST" and isset($_POST['sceneid'])) {
+if($_SERVER["REQUEST_METHOD"] == "POST") {
 
 	require('includes/mysql.inc.php');
 	$connection = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
@@ -18,6 +18,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" and isset($_POST['sceneid'])) {
 
 
 	//Ab hier sollen die Daten aus der SQL DB ausgelesen werden
+	$sceneID = $_POST['id'];
 	$sceneName = 'Day of the Cow';
 	$sceneBackgroudPath = 'images/sc1_bg.png';
 	
@@ -30,8 +31,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST" and isset($_POST['sceneid'])) {
 	$objectEventId = array();
 
 
-	// Hier die Ausgabe ans JS:
-	echo('');
+	// Hier die Ausgabe ans JS, nach JSon Notation:
+
+	$responseString = '{"sceneID":"'.$sceneID.'", "sceneName":"'.$sceneName.'", "sceneBackgroudPath":"'.$sceneBackgroudPath.'"}';
+	echo($responseString);
 }
 
 ?>

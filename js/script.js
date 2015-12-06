@@ -91,10 +91,28 @@ function bindElementWithClickFunction(id, functionString) {
 }
 //Startet ein komplett neues Spiel
 function startNewGame() {
-	scene = new Scene(0); // erzeugt Scene Object
+	loadScene(0);
+	
 	scene.start();
 }
 
+
+function loadScene(sceneID) { // hier findet der AJAX Request statt
+	var response;
+
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (xhttp.readyState == 4 && xhttp.status == 200) {
+			response = xhttp.responseText;
+			alert(response);
+			scene = new Scene(0, "cow", "images/sc1_bg.png"); // erzeugt Scene Object
+		}
+	};
+
+	xhttp.open("POST", "loadscene.php", true);
+	xhttp.send('id=1356');
+
+}
 
 //Objekte
 
@@ -104,11 +122,11 @@ function draw() {
 }
 
 // Das Scene Objekt
-function Scene(sceneID) {
+function Scene(sceneID, name, bgPath) {
 	
 	this.id = sceneID,
-	this.name = SCENE_NAME,
-	this.backgroundPath = SCENE_BG_PATH,
+	this.name = name,
+	this.backgroundPath = bgPath,
 	this.image = new Image(),
 	this.image.src = this.backgroundPath, 
  
@@ -127,7 +145,6 @@ function Scene(sceneID) {
 		ctx.drawImage(this.image, 0, 0);
 		player.draw();
 	}
-
 
 }
 
@@ -170,6 +187,7 @@ function Player() {
 		this.targetPositionx = x;
 	}	
 }
+
 
 
 
