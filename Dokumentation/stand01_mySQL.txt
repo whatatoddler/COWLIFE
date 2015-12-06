@@ -1,4 +1,4 @@
-stand01_mySQL.txt
+﻿stand01_mySQL.txt
 
 
 
@@ -42,3 +42,19 @@ stand01_mySQL.txt
 	   	email VARCHAR
 	   	passwort VARCHAR
 	
+=== Feedback Alpers, nov 27 ===
+
+Liebe/r Studierende/r,
+
+die Ideen zur Login-Tabelle sind gut. Prüfen Sie jetzt noch, welche anderen Daten eine für eine gewisse Zeitspanne gespeichert werden sollen und stellen Sie dafür entsprechende Listen auf.
+
+Bei den übrigen Tabellen achten Sie bitte darauf, dass eine MySQL-DB nur einzelne Werte speichern kann. Die Nutzung einer DB macht dabei nur dann Sinn, wenn die Werte dauerhaft gespeichert werden sollen und für einzelne Nutzer u.a. individuell gespeichert werden sollen. Wenn dagegen im Spiel Events auftauchen, dann sollte in der Programmlogik (also in PHP bzw. JavaScript) gespeichert werden, wie die ablaufen.
+
+Anders würde das aussehen, wenn Sie tatsächlich komplette Spielstände mit Positionsdaten in der DB speichern wollen.
+
+Das bringt mich zum einzigen Kritikpunkt in der Dokumentation: Momentan wird aus Ihrem Teil zur Dokumentation nicht klar, warum welche Daten gespeichert werden sollen. Das mag teilweise ungewohnt sein, ist aber wichtig, damit Sie zu einem späteren Zeitpunkt prüfen können, ob bzw. wo Sie Ihr Projekt ändern wollen.
+
+Bezüglich der Implementierung: Bislang haben Sie den MySQL-Code in eigenen Dateien. Gibt es da ein Problem mit der Integration in den Quellcode in JS?
+
+Viele Grüße,
+Markus Alpers
