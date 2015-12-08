@@ -1,0 +1,9 @@
+Nachdem die Hauptseite erstellt war, (in der der HTML-Teil sehr mager ausgefallen ist), habe ich mit einer About-Us-Seite begonnen.
+Hier wollte ich vor allem in CSS einige Dinge probieren, wie bspw. verschiedene Methoden zum Skalieren einer Website im Browserfenster.
+
+Desweiteren wurden in der Zwischenzeit nur kleinere Veränderungen an der Hauptseite vorgenommen:
+HTML5-Tags überarbeitet
+Redundante Buttons entfernt, deren Funktion jetzt im JS-Teil integriert sind
+
+Nach Hr. Alpers Feedback noch ausstehend:
+Login & Registrierung
