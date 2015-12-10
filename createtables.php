@@ -68,6 +68,27 @@ name VARCHAR(30)NOT NULL UNIQUE
 			echo ('<br><br>Fehler beim Erzeugen der Tabelle: ') . mysqli_error($connection);	
 		}
 
+
+
+		$query = 'CREATE TABLE users
+(
+id INT UNIQUE PRIMARY KEY NOT NULL AUTO_INCREMENT,
+name VARCHAR UNIQUE NOT NULL,
+email VARCHAR UNIQUE NOT NULL,
+password VARCHAR NOT NULL
+)
+  ';
+
+		if(mysqli_query($connection, $query)) {
+			echo ('<br>Tabelle erzeugt.');
+		}
+		else {
+			$isFailed = true;
+			echo ('<br><br>Fehler beim Erzeugen der Tabelle: ') . mysqli_error($connection);	
+		}
+
+
+
 		
 
 	    $query = 'CREATE TABLE events
