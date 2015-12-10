@@ -4,5 +4,12 @@ VALUES ("1", "Day of the Cow", "images/sc1_bg.png", "1", "0", "0", "0", "0", "25
 
 
 
-INSERT INTO cowlife.objects (id, picturelink, eventid, name)
+INSERT INTO cowlife.objects 
+          (id, picturelink, eventid, name)
 VALUES("1", "images/grass1.png", "1", "Gras01");
+
+INSERT INTO cowlife.users   
+	   			(id, name, email, password)
+	   	VALUES	("$name", "$email", "$password");
+
+
