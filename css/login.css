@@ -11,18 +11,30 @@ h1 {
 }
 
 h3 {
+	margin: 15px;
 	color: rgba(200,100,100,0.8);
 	font-size: 160%;
 }
 
 #style {
 	margin: auto;
-	max-width: 1073px;
+	max-width: 700px;
 }
 
-#login {
-	text-align: justify;
-	margin: 30px 50px;
-	min-width: 640px;
-	max-width: 973px;
+#login, #regis {
+	float: left;
+	text-align: center;
+	margin: 29px 24px;
+	width: 300px;
+	height: 165px;
+	border-style: solid;
+	border-color: white;
+	border-width: 1px;
+}
+
+#regissub, #loginsub {
+	color: white;
+	width: 133px;
+	background-color: rgba(0, 0, 0, 0);
+	text-transform: uppercase;
 }
