@@ -1,0 +1,6 @@
+registerscript: nimmt die Daten Username/PW vom aufrufenden Dokument entgegen.
+-Daten solen auf Plausibilität geprüft werden, Stichwort SQL Injections.
+-Wenn user noch nicht existiert sollen die Daten in die SQL Tabelle eingetragen werden.
+
+loginscript:
+-Prüft die Daten, prüft ob username mit PW existiert, wenn ja wird Login Meldung angezeigt
