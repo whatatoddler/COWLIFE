@@ -117,3 +117,12 @@ code TEXT(500)
 		}
 	}
 ?>
+
+<!--
+=== Feedback Alpers, Jan 15 ===
+
+Das ist soweit für den DB-Teil gut. Was mir momentan noch fehlt ist die Integration einzelner DB-Transaktionen im laufenden Programm.
+Z.B. Anlegen neuer User, das Einfügen von Szenen in loadscene.php o.ä.
+
+=== Feedback Alpers, Edne ===
+-->
