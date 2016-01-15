@@ -1,0 +1,2 @@
+Es gibt jetzt eine Login- und Registrierungsseite. Das Registrieren erfolgt mit einer E-Mail-Adresse. Ansonsten nur kleinere Tweaks und und Updates.
+Damit ist für mich der HTML-Teil abgeschlossen.
